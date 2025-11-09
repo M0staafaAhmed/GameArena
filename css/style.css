@@ -1,0 +1,486 @@
+:root{
+    --p-color : #CBFE1C;
+    --s-color : #ACAFB4;
+    --site-bg : #0b0e13;
+    --contact-bg : #0E141F;
+    font-size: 14px;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: "Chakra Petch", sans-serif;
+    background-color: var(--site-bg);
+}
+
+::selection{
+    background-color: var(--p-color);
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Days One", sans-serif;
+}
+
+.bg-site{
+    background-color: var(--site-bg);
+}
+
+.bg-contact{
+    background-color: var(--contact-bg);
+}
+
+.text-contact{
+    color: var(--contact-bg);
+}
+
+h1.title{
+    font-size: 2rem;
+}
+
+.p-color{
+    color: var(--p-color);
+}
+
+.s-color{
+    color: var(--s-color);
+}
+
+.text-gray{
+    color: #99a1af;
+}
+
+.bg-p{
+    background-color: var(--p-color);
+}
+
+.border-p{
+    border-color: var(--p-color) !important;
+}
+
+.shine-btn{
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-btn::before{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(90deg,#0000,#fff6,#0000);
+    top: 0;
+    left: -100%;
+    transition: all .5s;
+    width: 100%;
+    height: 100%;
+}
+
+.shine-btn:hover::before{
+    left: 100%;
+}
+
+.custom-btn:hover{
+    background-color: var(--p-color);
+    color: #000;
+}
+
+.title p::before{
+    content: "";
+    width: 35%;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 70%, var(--p-color));
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title p::after{
+    content: "";
+    width: 35%;
+    height: 2px;
+    background-image: linear-gradient(to left, transparent 70%, var(--p-color));
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.primary-hover:hover{
+    color: var(--p-color) !important;
+}
+
+.fs-7{
+    font-size: .8rem;
+}
+
+.w-24{
+    width: calc(.25rem * 24);
+}
+
+.h-80{
+    height: calc(.25rem * 80);
+}
+
+.mb-12{
+    margin-bottom: .75rem !important;
+}
+
+.bottom-10{
+    bottom: 10%;
+}
+
+.transtion{
+    transition: all .3s;
+}
+
+.w-fit-content{
+    width: fit-content;
+}
+
+@keyframes to-left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes to-right{
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* Start nav */
+.navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show,
+.navbar-nav .nav-link:hover{
+    color: var(--p-color);
+}
+
+.navbar-brand:hover{
+    color: var(--p-color);
+}
+
+.sign{
+    border-top: 1px solid #acafb471;
+    padding-top: 10px;
+}
+
+.sign > div{
+    cursor: pointer;
+}
+
+.sign button{
+    width: 100%;
+}
+
+.sign i{
+    color: white;
+    cursor: pointer;
+}
+
+.sign i:hover{
+    color: var(--p-color);
+}
+/* End nav */
+
+/* Start Header */
+#header{
+    background-image:  linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)) , url(../images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-block: 80px;
+}
+
+#header .image .inner{
+    padding: .25rem;
+    background-image: linear-gradient(to right, var(--p-color), #0BDE72);
+    position: relative;
+}
+
+#header .image .inner div:first-child{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .image .inner .content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-20% , 20%);
+}
+
+#header .image .inner .content p{
+    font-size: .8rem;
+}
+
+#header .image .inner .content p span{
+    font-size: 1.2rem;
+}
+/* End Header */
+
+/* Start our games */
+#our-games .card-item .inline{
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+#our-games .card-item .inline:hover{
+    border-color: var(--p-color);
+}
+
+#our-games .card-item .inline:hover img{
+    scale: 1.1;
+}
+
+#our-games .card-item .inline::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .3s;
+    background-image: linear-gradient(to top, var(--p-color), transparent, transparent);
+    opacity: 0;
+}
+
+#our-games .card-item .inline:hover::after{
+    opacity: 1;
+}
+
+#our-games .card-item .inline h3{
+    bottom: -100px;
+    left: 0;
+    padding-inline: 20px;
+}
+#our-games .card-item .inline:hover h3{
+    bottom: 15px;
+}
+
+#our-games .card-item .inline .tags{
+    top: -50px;
+    left: 0;
+    padding-inline: 20px;
+}
+
+#our-games .card-item .inline:hover .tags{
+    top: 10px;
+}
+
+#our-games .arrow{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #99a1af;
+    transition: all .3s;
+}
+
+#our-games .arrow:hover{
+    color: var(--p-color);
+    border-color: var(--p-color);
+}
+
+/* End our games */
+
+/* Start what we do */
+#what-we-do .card-item{
+    height: 200px;
+}
+
+#what-we-do .card-item .inner:hover{
+    border-color: var(--p-color) !important;
+}
+
+#what-we-do .card-item .inner:hover .icon{
+    background-color: var(--p-color) !important;
+}
+
+#what-we-do .card-item .inner:hover .icon i{
+    color: #2B3035;
+}
+
+#what-we-do .card-item .inner::before,
+#what-we-do .card-item .inner::after{
+    content: "";
+    position: absolute;
+    transition: all .3s;
+}
+
+#what-we-do .card-item .inner::before{
+    top: -30px;
+    left: -30px;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: transparent transparent var(--p-color) transparent;
+    rotate: -45deg;
+}
+
+#what-we-do .card-item .inner::after{
+    bottom: -30px;
+    right: -30px;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: var(--p-color) transparent transparent transparent;
+    rotate: -45deg;
+}
+
+#what-we-do .card-item .inner:hover::before{
+    top: 10px;
+    left: 10px;
+}
+
+#what-we-do .card-item .inner:hover::after{
+    bottom: 10px;
+    right: 10px;
+}
+
+#what-we-do::after{
+    content: "";
+    width: 80%;
+    max-width: 600px;
+    height: 3px;
+    background-image: linear-gradient(to right, transparent, var(--p-color) 20%, var(--p-color) 80%, transparent);
+    display: block;
+    margin: auto;
+    box-shadow: 0 0px 20px var(--p-color);
+}
+/* End what we do */
+
+/* Start Sponsers */
+#sponsers .to-left{
+    animation: to-left 20s infinite linear;
+}
+
+#sponsers .to-right{
+    animation: to-right 20s infinite linear;
+}
+
+#sponsers .sponser-row::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,.6) , transparent);
+    z-index: 20;
+}
+
+#sponsers .sponser-row::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,.6) , transparent);
+    z-index: 20;
+}
+
+#sponsers .container-fluid{
+    background-image: radial-gradient(var(--p-color), var(--site-bg) , var(--site-bg));
+    padding-block: 100px;
+}
+/* End Sponsers */
+
+/* Start Our Team */
+#our-team .inner div.p-color p{
+    rotate: 90deg;
+}
+
+#our-team .card-item .inner{
+    cursor: pointer;
+}
+
+#our-team .card-item .inner::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backdrop-filter: grayscale() brightness(.9);
+    z-index: 20;
+    transition: all 1s;
+    transform: translateY(0);
+}
+
+#our-team .card-item .inner:hover::before{
+    transform: translateY(-100%);
+}
+/* End Our Team */
+
+/* Start contact us */
+#contact-us .icon{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+#contact-us .comunity{
+    background-image: linear-gradient(to right, var(--p-color), #0BDE72);
+}
+
+#contact-us .comunity .sm-icon{
+    width: 3rem;
+    height: 3rem;
+    background-color: #121a10;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+#contact-us .comunity .sm-icon:hover{
+    background-color: #263B20;
+}
+
+.custom-input{
+    background-color: #364153;
+    border: none;
+    color: white !important;
+    resize: none;
+}
+
+.custom-input::placeholder{
+    color: #6A737B;
+    font-weight: bold;
+}
+
+.custom-input:focus,
+.form-check-input:focus{
+    outline: 2px solid var(--p-color);
+    background-color: #364153;
+    box-shadow: none;
+    border: none;
+}
+
+.form-check-input:checked{
+    background-color: var(--s-color);
+    border-color: var(--p-color);
+}
+
+.select-box i {
+    position: absolute;
+    right: .8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: white;
+    font-size: 0.7rem;
+}
+/* End contact us */

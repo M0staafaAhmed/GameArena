@@ -1,0 +1,155 @@
+/* sm 576px -->      */
+@media screen and (min-width:576px) {
+    .sm-50 {
+        width: 50%;
+    }
+    .sm-33 {
+        width: 33.333%;
+    }
+    .sm-25 {
+        width: 25%;
+    }
+    .sm-20 {
+        width: 20%;
+    }
+    .sm-16 {
+        width: 16.66%;
+    }
+
+    .title p::before,
+    .title p::after{
+        width: 37%;
+    }
+
+    #what-we-do .card-item{
+        height: 300px;
+    }
+
+}
+
+/* md 768px  -->    */
+@media screen and (min-width:768px) {
+    :root{
+        font-size: 15px;
+    }
+    .md-50 {
+        width: 50%;
+    }
+    .md-33 {
+        width: 33.333%;
+    }
+    .md-25 {
+        width: 25%;
+    }
+    .md-20 {
+        width: 20%;
+    }
+    .md-16 {
+        width: 16.66%;
+    }
+
+    h1.title{
+        font-size: 3rem;
+    }
+
+    .h-80{
+        height: auto;
+    }
+
+}
+
+/* lg 992px  -->       */
+@media screen and (min-width:992px) {
+    :root{
+        font-size: 16px;
+    }
+    .lg-50 {
+        width: 50%;
+    }
+    .lg-33 {
+        width: 33.333%;
+    }
+    .lg-25 {
+        width: 25%;
+    }
+    .lg-20 {
+        width: 20%;
+    }
+    .lg-16 {
+        width: 16.66%;
+    }
+
+    h1.title{
+        font-size: 3.7rem;
+    }
+
+    #header{
+        padding: 0;
+    }
+
+    #header .image .inner div:first-child{
+        height: 370px;
+    }
+
+    #header .image .inner .content{
+        transform: translate(-25% , 25%);
+    }
+
+    .sign{
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .sign button{
+        width: auto;
+    }
+
+    .title p::before,
+    .title p::after{
+        width: 43%;
+    }
+
+    #what-we-do .card-item{
+        height: auto;
+    }
+}
+
+/* xl 1200px  -->       */
+@media screen and (min-width:1200px) {
+    .xl-50 {
+        width: 50%;
+    }
+    .xl-33 {
+        width: 33.333%;
+    }
+    .xl-25 {
+        width: 25%;
+    }
+    .xl-20 {
+        width: 20%;
+    }
+    .xl-16 {
+        width: 16.66%;
+    }
+
+}
+
+/* xxl 1400px  -->       */
+@media screen and (min-width:1400px) {
+    .xxl-50 {
+        width: 50%;
+    }
+    .xxl-33 {
+        width: 33.333%;
+    }
+    .xxl-25 {
+        width: 25%;
+    }
+    .xxl-20 {
+        width: 20%;
+    }
+    .xxl-16 {
+        width: 16.66%;
+    }
+
+}
